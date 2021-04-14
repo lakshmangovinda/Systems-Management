@@ -1,0 +1,10 @@
+.active,
+.a:hover {
+  color: blue;
+  border-bottom: 2px solid rgb(104, 59, 226);
+  display: inline-flex;
+ 
+}
+.text {
+  margin-left: 45%;
+}

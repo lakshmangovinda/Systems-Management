@@ -1,0 +1,220 @@
+body {
+     display: flex;
+   }
+   #name {
+     width: 15em;
+     height: 3em;
+     background: #eaeaea;
+     box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25);
+     border-radius: 6px;
+   }
+   
+   #contacts {
+     width: 10em;
+     height: 3em;
+     background: #eaeaea;
+     box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25);
+     border-radius: 6px;
+   }
+   
+   #email {
+     width: 15em;
+     height: 3em;
+     background: #eaeaea;
+     box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25);
+     border-radius: 6px;
+   }
+   #dob{
+    width: 15em;
+    background: #dad3d3;
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+   }
+   
+   #btns {
+     width: 200px;
+     height: 47px;
+   
+     background: #2f353a;
+     border-radius: 57px;
+     color: white;
+     margin-top: 8%;
+     margin-right: 5%;
+     text-align: center;
+     float: right;
+   }
+   #btn{
+    width: 135px;
+    height: 42px;
+  
+    background: #2f353a;
+    border-radius: 57px;
+    color: white;
+  
+    text-align: center; 
+margin-top: 4%;
+margin-right: 0;
+   }
+
+
+  
+   #msg {
+     margin-top: 8%;
+     margin-left: 5%;
+     float: left;
+     display: flex;
+   
+     line-height: 21px;
+     letter-spacing: 0.4px;
+   
+     color: #000000;
+   }
+   
+   #candidatename {
+     width: 150px;
+     height: 21px;
+     margin-top: 55px;
+     margin-bottom: -14px;
+     margin-left: 67px;
+   
+     line-height: 16px;
+     align-items: center;
+   
+     color: #363740;
+   }
+   
+  
+   
+   
+   #rule2 {
+     width: 100%;
+     height: 5px;
+     margin-top: 10px;
+     margin-left: 0px;
+   
+     background: #363740;
+   }
+   
+  
+   #picture {
+     margin-top: 40px;
+     margin-left: 80px;
+   
+     line-height: 21px;
+     letter-spacing: 0.4px;
+   
+     color: #000000;
+     flex: 1;
+     flex-wrap: wrap;
+   }
+   
+   #flexone {
+     display: flex;
+     flex-wrap: wrap;
+   }
+  
+   .pictureupload {
+     width: 120px;
+     height: 120px;
+   
+     border: 1px dashed #0041e8;
+     box-sizing: border-box;
+   
+     color: #0041e8;
+     flex: 1;
+     position: relative;
+   }
+   #uploadbtn {
+     margin-top: 0px;
+     margin-left: 0px;
+     width: 120px;
+     height: 120px;
+     opacity: 0;
+   }
+  
+  
+   
+
+   #flextwo {
+     display: flex;
+     flex-wrap: wrap;
+   }
+   
+  
+
+
+   
+  
+
+
+
+   #rule {
+     margin-top: 21px;
+     margin-left: 0px;
+     width: 100%;
+     height: 8px;
+     background-color: #363740;
+   }
+
+   .innerhead {
+     margin-left: 2px;
+     width: 30vw;
+     padding-top: 10px;
+   }
+   #formdiv {
+     width: 80vw;
+     border-radius: 5px;
+     background-color: white;
+     margin-left:10px;
+     margin-right: 20px;
+     height: 360vh;
+     flex: 1;
+   }
+   .container {
+     width: 80vw;
+     flex-wrap: wrap;
+     display: flex;
+     justify-content: space-between;
+   }
+   #one {
+     flex: 1;
+     margin-left: 2%;
+   }
+   #one label {
+     display: block;
+   }
+   
+   #nav {
+     margin-top: -40px;
+     margin-left: 0;
+     height: 110rem;
+     width: 7rem;
+     background: #363740;
+     float: left;
+   }
+   /*Adjusting heading div*/
+   .head {
+     margin-left: 10px;
+     display: flex;
+   }
+ 
+   .headings {
+     padding-top: 8px;
+     line-height: 30px;
+     letter-spacing: 0.3px;
+   
+     color: #252733;
+     flex: 1;
+   }
+   #emp {
+     padding-top: 15px;
+     margin-top: 0px;
+     margin-left: 162px;
+   }
+
+   
+   
+   .danger {
+     color: red;
+   }
+   

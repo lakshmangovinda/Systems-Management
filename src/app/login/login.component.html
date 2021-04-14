@@ -1,0 +1,63 @@
+<div class="head">
+     <h1 class="headings">Employee login</h1> 
+     
+     
+     <!--  heading-->
+   </div>
+   <div id="formdiv">
+     <div>
+       <h2 class="innerhead">Create New</h2>
+       <!--container heading -->
+     </div>
+     <div><hr id="rule" /></div>
+   
+     <form [formGroup]="form" novalidate (ngSubmit)="submit(form.value)">
+       <div class="container">
+         <div id="one">
+        
+           <div>
+             <label for="email">Email*</label>
+             <input
+               id="email"
+               formControlName="email"
+               type="email"
+               class="form-control"
+               aria-describedby="emailHelp"
+               placeholder="Email*"
+             />
+             <div class="danger" *ngIf="mail.touched && mail.invalid">
+               <div *ngIf="mail.errors.required">Email Required</div>
+               <div *ngIf="mail.errors.pattern">Invalid Email</div>
+              </div>
+            
+             </div>
+             <div>
+               <label for="password">Password*</label>
+               <input
+                 id="email"
+                 formControlName="password"
+                 type="password"
+                 class="form-control"
+                 
+              placeholder="Password*"
+               />
+               <div class="danger" *ngIf="password.touched && password.invalid">
+                 <div *ngIf="password.errors.required">password Required</div>
+                 <div *ngIf="password.errors.minlength">password shouldbe minimum of 6 length</div>
+                 
+                </div>
+              
+               </div>
+          
+           
+          
+         </div>
+        
+       </div>
+     
+    
+         
+       <p id="msg">confirm all the filled data before submitting</p>
+       <button id="btns" type="submit" [disabled]="form.invalid">Login</button>
+     </form>
+   </div>
