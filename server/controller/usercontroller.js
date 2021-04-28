@@ -4,7 +4,7 @@ const encrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const u = require('../model/user.model');
 
-
+//user register
 module.exports.postuser = (req, res) =>{
  
   const body  = req.body;
@@ -59,6 +59,7 @@ else{
 
 });
 }
+//get user info
 module.exports.getuser = (req, res) => { 
   u.alldata( (data,err) => {
     if (err) {
@@ -71,7 +72,7 @@ module.exports.getuser = (req, res) => {
     res.send(data);
   });
 };
-
+//get user by email
 module.exports.getuserbyemail = (req, res) => { 
   u.getuserbyemail(req.body, (data,err) => {
     if (err) {
@@ -84,6 +85,7 @@ module.exports.getuserbyemail = (req, res) => {
     res.send(data);
   });
 };
+//user login
 module.exports.login  = (req,res) => {
   const body =req.body;
   console.log(req.body);

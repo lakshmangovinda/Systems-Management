@@ -5,10 +5,10 @@ const user = require('../controller/usercontroller');
 const validate = require('../auth/token.validate');
 
 
-router.route("/user").get(user.getuser);
-router.route("/userlogin").post(user.postuser);
-router.route("/userbyemail").get(user.getuserbyemail);
-router.route('/login').post(user.login);
+router.route("/user", validate).get(user.getuser);//fetch all user data
+router.route("/userlogin").post(user.postuser);//user registration
+router.route("/userbyemail", validate).get(user.getuserbyemail);//fetch user by email
+router.route('/login').post(user.login);//user login
 
 
  module.exports = router;
