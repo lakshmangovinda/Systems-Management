@@ -1,0 +1,25 @@
+.container{
+     min-width: 100%;
+     min-height: 100vh;
+     background-image: linear-gradient(white,lightsteelblue);
+
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+     
+ 
+}
+.secondmain{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     margin-left: 2%;
+
+
+}
+@media screen and (max-width: 600px) {
+     .secondmain{
+          margin-top: 10%;
+     }
+}

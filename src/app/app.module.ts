@@ -16,6 +16,7 @@ import { SuccessregisterComponent } from './successregister/successregister.comp
 import {HttpClientModule} from '@angular/common/http';
 import { AuthGuard } from './apiservice/auth.guard';
 import { RouteGuard } from './apiservice/route.guard';
+import { LabModule } from './lab/lab.module';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { RouteGuard } from './apiservice/route.guard';
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
+    LabModule
   ],
   providers: [AuthGuard,RouteGuard],
   bootstrap: [AppComponent]

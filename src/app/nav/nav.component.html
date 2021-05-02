@@ -32,6 +32,11 @@
              >
            </li>
            <li class="nav-item">
+            <a class="nav-link a" *ngIf="guard.loggedin()" routerLinkActive="active" routerLink="lablist"
+              >Labs</a
+            >
+          </li>
+           <li class="nav-item">
              <a class="nav-link a" *ngIf="guard.loggedin() && guard.user" routerLinkActive="active" routerLink="admin"
                >Admin</a
              >

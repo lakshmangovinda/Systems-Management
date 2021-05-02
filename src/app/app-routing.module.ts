@@ -4,6 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './apiservice/auth.guard';
 import { RouteGuard } from './apiservice/route.guard';
 import { HomeComponent } from './home/home.component';
+import { LabModule } from './lab/lab.module';
 import { LoginComponent } from './login/login.component';
 import { NotadminComponent } from './notadmin/notadmin.component';
 import { RegisterComponent } from './register/register.component';
@@ -20,11 +21,12 @@ const routes: Routes = [
   { path: 'home',   component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'register',   component: RegisterComponent,canActivate:[RouteGuard]},
   { path: 'successregister',   component: SuccessregisterComponent,},
+  {path: 'lablist', loadChildren:'./lab/lab.module#LabModule'}
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule,LabModule]
 })
 export class AppRoutingModule { }
