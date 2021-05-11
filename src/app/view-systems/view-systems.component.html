@@ -1,0 +1,21 @@
+<button class="btn-primary" (click)="back()">options</button>
+<div class=row >
+  
+     <div class="card " style="width: 13rem;" *ngFor="let a of systemdata;let i=index">
+          <div class="card-body">
+            <h5 class="card-title">{{labname}}</h5>
+             <div class="card-text">
+            SystemID: {{a.systeminfo.systemnumber}}
+              Company: {{a.systeminfo.company}}
+              Keybaord: {{a.systeminfo.keyboard}}
+              mouse: {{a.systeminfo.mouse}}
+              Processor: {{a.systeminfo.processor}}
+               Ram:{{a.systeminfo.ram}}
+               Screen:{{a.systeminfo.screen}}
+              SoftwareAvailable: {{a.systeminfo.soft}}
+              OS: {{a.systeminfo.OS}}
+             </div>
+             <button class="btn btn-primary" (click)="edit(a.id)">Edit</button>
+          </div>
+        </div>
+</div>

@@ -23,9 +23,21 @@ export class ApiService {
   login(logincredintails){
     return this.httpservice.post('http://localhost:3888/login',logincredintails)
     .pipe(map(val => val ));
-                    
-    
   }
+  postsystem(value){
+    return this.httpservice.post('http://localhost:3888/postsystem',value);
+
+  }
+  getsystem(labname){
+
+    return this.httpservice.get(`http://localhost:3888/getsystem/${labname}`);
+}
+getsystembyid(id){
+  return this.httpservice.get(`http://localhost:3888/getbyid/${id}`);
+}
+editsystem(id,value){
+  return this.httpservice.put(`http://localhost:3888/editsystem/${id}`,value);
+}
   loggedin(){
     return !!localStorage.getItem('token');
   }
@@ -38,8 +50,7 @@ export class ApiService {
      
     
      this.jwt = jwt_decode(token);
-     console.log(this.jwt.result[0].role);
-return this.jwt.result[0].role;
+   return this.jwt.result[0].role;
 
  
 

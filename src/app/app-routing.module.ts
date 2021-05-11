@@ -20,8 +20,13 @@ const routes: Routes = [
   { path: 'notadmin',   component: NotadminComponent, canActivate: [AuthGuard] },
   { path: 'home',   component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'register',   component: RegisterComponent,canActivate:[RouteGuard]},
-  { path: 'successregister',   component: SuccessregisterComponent,},
-  {path: 'lablist', loadChildren:'./lab/lab.module#LabModule'}
+  { path: 'successregister',   component: SuccessregisterComponent,canActivate: [AuthGuard]},
+  {path: 'lablist', loadChildren:'./lab/lab.module#LabModule'},
+  {path: 'option/:name', loadChildren:'./lab/lab.module#LabModule'},
+  {path: 'new/:name', loadChildren:'./lab/lab.module#LabModule'},
+  {path: 'view/:name', loadChildren:'./lab/lab.module#LabModule'},
+  {path: 'edit/:name/:id', loadChildren:'./lab/lab.module#LabModule' }
+
 
 ];
 

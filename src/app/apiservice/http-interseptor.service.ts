@@ -16,7 +16,5 @@ setHeaders:{
 }
     });
     return next.handle(tokeintersept);
-    
-
-  }
+    }
 }

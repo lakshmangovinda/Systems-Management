@@ -39,8 +39,7 @@ const salt = encrypt.genSaltSync(10);
       err.message || "invalid email & passsword"
     })
     }
-   
-    console.log(data[0].email)
+ 
 if(emailid !== data[0].email){
           u.createuser(users, (err, data) => {
       if (err)
@@ -58,6 +57,55 @@ else{
 }
 
 });
+}
+module.exports.postsystem = (req,res) => {
+
+let sysinfo = req.body;
+  u.postsystem( sysinfo,(data,err)=>{
+    if (err) {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while posting system."
+      });
+    }
+
+    res.send(data);
+  });
+}
+module.exports.editsystem = (req,res) => {
+
+   let id = req.params.id;
+
+let sysinfo = req.body.systeminfo;
+let labname = req.body.labname;
+
+  u.editsystem( labname,sysinfo,id,(data,err)=>{
+    if (err) {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while editing system."
+      });
+    }
+
+    res.send(data);
+  });
+}
+
+
+module.exports.getsystem = (req,res) =>{
+
+  let labname = req.params.name
+  u.getsystem(labname,(data,err)=>{
+    if (err) {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving systems."
+      });
+    }
+
+    res.send(data);
+  
+  })
 }
 //get user info
 module.exports.getuser = (req, res) => { 
@@ -85,10 +133,26 @@ module.exports.getuserbyemail = (req, res) => {
     res.send(data);
   });
 };
+//get system by id
+module.exports.getbyid = (req, res) => { 
+  let id = req.params.id;
+  u.getbyid(id,(data,err) => {
+    if (err) {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving system by id."
+      });
+    }
+
+    res.send(data);
+  });
+};
+
+
 //user login
 module.exports.login  = (req,res) => {
   const body =req.body;
-  console.log(req.body);
+
   u.getuserbyemail(body,(data,err) =>{
 if (err) {
   res.status(500).json({

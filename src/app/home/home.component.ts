@@ -4,7 +4,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  encapsulation: ViewEncapsulation.None,
+
 })
 export class HomeComponent implements OnInit {
 
@@ -16,6 +16,6 @@ sret(){
   window.location.href='http://www.sreerama.ac.in/srec/index.html'
 }
 sres(){
-  window.location.href='http://www.sreerama.ac.in/sres/index.html'
+  window.open('http://www.sreerama.ac.in/sres/index.html')
 }
 }

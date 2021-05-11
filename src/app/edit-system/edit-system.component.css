@@ -1,0 +1,14 @@
+
+.heading{
+     display: flex;
+     justify-content: center;
+     }
+     .btn {
+          margin-left: 35%;
+     }
+     .bnts{
+          margin-left: 25px;
+     }
+     #soft{
+          resize: none;
+     }

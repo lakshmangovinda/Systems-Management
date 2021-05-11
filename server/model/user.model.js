@@ -1,15 +1,77 @@
-
-
-
 const sql = require('../mysql/mysql');
 
 const userdata = function(users) {
   this.fullName = users.fullName;
-
-    this.email = users.email;
+   this.email = users.email;
     this.passwod = users.password;
     this.phoneNumber = users.phoneNumber;
 };
+
+userdata.postsystem = (u,result ) =>{
+ 
+ let information=u.systeminfo;
+let array = [
+  [information],
+  [u.lab]
+]
+
+  sql.query( 'insert into register.systeminfo(systeminfo,labname) values (?)',[array] , (err, res) => {
+    if (err) {
+      
+      result(err, null);
+      return;
+    }
+
+    result(res);
+  });
+
+}
+userdata.editsystem = (labname,u,id,result ) =>{
+ 
+  
+
+
+
+
+  sql.query( 'UPDATE systeminfo SET labname=?,systeminfo=? WHERE id = ?',[labname,u,id] , (err, res) => {
+    if (err) {
+      
+      result(err, null);
+      return;
+    }
+
+    result(res);
+  });
+
+}
+
+
+
+userdata.getsystem = (name,result)=>{
+  let labname = name;
+  sql.query('select * from systeminfo where labname = ?',[labname], (err,res)=>{
+    if (err) {
+      
+      result(err, null);
+      return;
+    }
+
+    result(res);
+  })
+}
+
+userdata.getbyid = (id,result)=>{
+  let labname = id;
+  sql.query('select * from systeminfo where id = ?',[labname], (err,res)=>{
+    if (err) {
+      
+      result(err, null);
+      return;
+    }
+
+    result(res);
+  })
+}
 
 
 userdata.alldata = ( result) => {
@@ -39,7 +101,6 @@ userdata.createuser = (u ,result) => {
 
   let U = [
     [ u.fullName],
-   
     [ u.email],
     [u.passwod],
     [u.phoneNumber],

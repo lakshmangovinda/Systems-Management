@@ -1,0 +1,42 @@
+
+<div class=container>
+      
+     <h3 class=heading>Edit {{name}} System Details</h3>
+     <button class=" btn-primary" (click)="option()">Back to Options</button>
+     <button class="btns btn-primary" (click)="view()">View Systems</button>
+     <form [formGroup]=form  (ngSubmit)=submit(form.value)>
+               <div class="row">
+     <div class="hardware col-4">
+          <h4 class="heading2">Hardware</h4>
+          <label for="sysnum">System Number</label>
+          <input type="text"   name="sysnum" id="synum"class="form-control"placeholder="SystemNumber" formControlName="systemnumber">
+          <label for="company">company</label>
+     <input type="text"   name="company" id="company"class="form-control"placeholder="company" formControlName="company">
+     <label for="ram">Ram</label>
+     <input type="text" name="ram" id="ram"class="form-control"placeholder="Ramsize" formControlName="ram">
+     <label for="processor">processor</label>
+     <input type="text" name="processor" id="processor"class="form-control"placeholder="processor" formControlName="processor">
+     
+     <label for="screen">screen</label>
+     <input type="text" name="screen" id="screen"class="form-control"placeholder="screen" formControlName="screen">
+     <label for="keyboard">keyboard</label>
+     <input type="text" name="keyboard" id="keyboard"class="form-control"placeholder="keyboard" formControlName="keyboard"> 
+     <label for="mouse">mouse</label>
+     <input type="text" name="mouse" id="mouse"class="form-control"placeholder="mouse" formControlName="mouse" >
+     
+     </div>
+     <div class="software col-4">
+          <h4 class="heading3">software</h4>
+          <label for="OS">OS</label>
+     <input type="text" name="OS" id="OS"class="form-control"placeholder="OS" formControlName="OS" >
+          <label for="soft">Avilable Softwares</label>
+     <textarea  name="soft" id="soft"class="form-control"placeholder="soft" formControlName="soft" rows="4" cols="50"></textarea>
+     </div>
+     
+     </div>
+     <button class=" btn btn-primary" [disabled]="form.invalid" type="submit">Submit</button>
+            </form>
+            
+          </div>
+     
+     

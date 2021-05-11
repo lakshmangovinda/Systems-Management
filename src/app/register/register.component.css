@@ -39,9 +39,9 @@ body {
      border-radius: 57px;
      color: white;
      margin-top: 8%;
-     margin-right: 5%;
+   margin-left: 5%;
      text-align: center;
-     float: right;
+     float: left;
    }
    #btn{
     width: 135px;
@@ -151,8 +151,8 @@ margin-right: 0;
    #rule {
      margin-top: 21px;
      margin-left: 0px;
-     width: 100%;
-     height: 8px;
+     width: 95vw;
+     height: 5px;
      background-color: #363740;
    }
 
@@ -167,7 +167,7 @@ margin-right: 0;
      background-color: white;
      margin-left:10px;
      margin-right: 20px;
-     height: 360vh;
+     height: 75vh;
      flex: 1;
    }
    .container {
